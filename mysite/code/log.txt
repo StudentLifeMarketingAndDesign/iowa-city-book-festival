@@ -1,0 +1,88 @@
+CleanupEventsTask
+Archive page found, its ID is:177<br />Checking Events:<br />
+    		<ul><h3>Checking dates associated with <strong>Big Love by Charles L. Mee: </strong></h3><li>Starts:2012-03-29, Ends:2012-03-31- <strong> old </strong><li>Starts:2012-04-01, <li>Starts:2012-04-04, Ends:2012-04-07- <strong> old </strong><li>Starts:2012-04-12, Ends:2012-04-14<strong>NEW DO NOT ARCHIVE</strong><br />status: still_new<h3>Checking dates associated with <strong>Take Back the Night: </strong></h3><li>Starts:2012-04-24, <br />status: still_new<h3>Checking dates associated with <strong>Dance Thesis Concert II: </strong></h3><li>Starts:2012-04-12, Ends:2012-04-14<strong>NEW DO NOT ARCHIVE</strong><br />status: still_new<h3>Checking dates associated with <strong>The Room (2003): </strong></h3><li>Starts:2012-04-14, <br />status: still_new<h3>Checking dates associated with <strong>Memento (2000): </strong></h3><li>Starts:2012-05-05, <br />status: still_new<h3>Checking dates associated with <strong>Stress Management: </strong></h3><li>Starts:2012-04-16, <br />status: still_new<h3>Checking dates associated with <strong>Increasing Psychological Flexibility: </strong></h3><li>Starts:2012-04-17, <br />status: still_new<h3>Checking dates associated with <strong>Inflatables Nights: </strong></h3><li>Starts:2012-03-24, <li>Starts:2012-04-14, <li>Starts:2012-04-28, <li>Starts:2012-05-05, <br />status: still_new<h3>Checking dates associated with <strong>Stir-Fry: Printmaking Workshop I & II : </strong></h3><li>Starts:2012-04-06, <li>Starts:2012-04-15, <br />status: still_new<h3>Checking dates associated with <strong>TEST EVENT DON'T PUBLISH: </strong></h3><h3>Checking dates associated with <strong>Dodgeball for Diabetes: </strong></h3><h3>Checking dates associated with <strong>PRSSA Regional Conference 2012: </strong></h3><li>Starts:2012-04-13, Ends:2012-04-15<strong>NEW DO NOT ARCHIVE</strong><br />status: still_new<h3>Checking dates associated with <strong>Test Event: </strong></h3><h3>Checking dates associated with <strong>NSCS Tie-Dye Tornado: </strong></h3><h3>Checking dates associated with <strong>Dodgeball Tournament: </strong></h3><li>Starts:2012-04-29, <br />status: still_new<h3>Checking dates associated with <strong>Childish Gambino: </strong></h3><li>Starts:2012-04-16, <br />status: still_new<h3>Checking dates associated with <strong>Grace Potter and the Nocturnals: </strong></h3><li>Starts:2012-04-26, <br />status: still_new<h3>Checking dates associated with <strong>Sleigh Bells: </strong></h3><li>Starts:2012-04-24, <br />status: still_new<h3>Checking dates associated with <strong>Gusto Latino: </strong></h3><li>Starts:2012-04-20, <br />status: still_new<h3>Checking dates associated with <strong>Clearance Sale: </strong></h3><li>Starts:2012-04-11, Ends:2012-04-13<strong>NEW DO NOT ARCHIVE</strong><br />status: still_new<h3>Checking dates associated with <strong>We Need to Talk About Kevin: </strong></h3><li>Starts:2012-04-06, Ends:2012-04-08- <strong> old </strong><li>Starts:2012-04-10, Ends:2012-04-12- <strong> old </strong><br />status: oldERROR [User Warning]: Director::protocolAndHost() lacks sufficient information - HTTP_HOST not set.  You probably want to define $_FILE_TO_URL_MAPPING in your _ss_environment.php as instructed on the "sake" page of the doc.silverstripe.com wiki
+IN GET /Applications/MAMP/htdocs/afterclass_dev//CleanupEventsTask
+Line 388 in /Applications/MAMP/htdocs/afterclass_dev/sapphire/core/control/Director.php
+
+Source
+======
+  379: 			return Director::protocol() . $_SERVER['HTTP_HOST'];
+  380: 		} else {
+  381: 			global $_FILE_TO_URL_MAPPING;
+  382: 			if(Director::is_cli() && isset($_FILE_TO_URL_MAPPING)) $errorSuggestion = '  You probably want to
+       define '.
+  383: 				'an entry in $_FILE_TO_URL_MAPPING that covers "' . Director::baseFolder() . '"';
+  384: 			else if(Director::is_cli()) $errorSuggestion = '  You probably want to define
+       $_FILE_TO_URL_MAPPING in '.
+  385: 				'your _ss_environment.php as instructed on the "sake" page of the doc.silverstripe.com wiki';
+  386: 			else $errorSuggestion = "";
+  387: 			
+* 388: 			user_error("Director::protocolAndHost() lacks sufficient information - HTTP_HOST not
+       set.$errorSuggestion", E_USER_WARNING);
+  389: 			return false;
+  390: 			
+  391: 		}
+  392: 	}
+  393: 
+  394: 	/**
+
+Trace
+=====
+<ul>user_error(Director::protocolAndHost() lacks sufficient information - HTTP_HOST not set.  You probably want to define $_FILE_TO_URL_MAPPING in your _ss_environment.php as instructed on the "sake" page of the doc.silverstripe.com wiki,512)
+line 388 of Director.php
+
+Director::protocolAndHost()
+line 360 of Director.php
+
+Director::absoluteURL(/Applications/MAMP/htdocs/afterclass_dev/)
+line 595 of Director.php
+
+Director::absoluteBaseURL()
+line 499 of Director.php
+
+Director::makeRelative(http://www.youtube.com/watch?v=bV7Y5cylhNc&feature=youtu.be)
+line 77 of HtmlEditorField.php
+
+HtmlEditorField->saveInto(AfterClassEvent)
+line 1415 of SiteTree.php
+
+SiteTree->syncLinkTracking()
+line 1376 of SiteTree.php
+
+SiteTree->onBeforeWrite()
+line 234 of CalendarEvent.php
+
+CalendarEvent->onBeforeWrite()
+line 61 of AfterClassEvent.php
+
+AfterClassEvent->onBeforeWrite()
+line 936 of DataObject.php
+
+DataObject->write()
+line 74 of CleanupEventsTask.php
+
+CleanupEventsTask->cleanupEvents()
+line 11 of CleanupEventsTask.php
+
+CleanupEventsTask->process()
+line 27 of CliController.php
+
+CliController->index(SS_HTTPRequest)
+line 193 of Controller.php
+
+Controller->handleAction(SS_HTTPRequest)
+line 143 of RequestHandler.php
+
+RequestHandler->handleRequest(SS_HTTPRequest)
+line 147 of Controller.php
+
+Controller->handleRequest(SS_HTTPRequest)
+line 282 of Director.php
+
+Director::handleRequest(SS_HTTPRequest,Session)
+line 125 of Director.php
+
+Director::direct(/CleanupEventsTask)
+line 77 of cli-script.php
+
+</ul>
