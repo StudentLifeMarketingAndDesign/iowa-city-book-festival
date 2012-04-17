@@ -1,18 +1,27 @@
 <?php
 class Tag extends DataObject {
-
 	public static $db = array(
-		"Title" => "Varchar(155)"
+		"Title" => "Text",
+		"Showmenu" => "Boolean"
 	);
+	function getCMSFields_forPopup() {
+		$fields = new FieldSet();
+		$fields->push( new TextField( 'Title' ) );
+		//$fields->push( new CheckboxField('Showmenu', 'Show in Main Menu?') );
+		return $fields;
+	}
+	
 	public static $belongs_many_many = array(
-	
-		"AfterClassEvents" => "AfterClassEvent"
-	
+		"BookFestEvents" => "BookFestEvent"
 	);
 	
-	function getEvents(){
-	  return $this->AfterClassEvents();
+	
+	function Link(){
+	
+		$base_url = Director::absoluteBaseURL();
+		return $base_url."/schedule/tags/".$this->Title;
 	
 	}
-
+	
+	
 }

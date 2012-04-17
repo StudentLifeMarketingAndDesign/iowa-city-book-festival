@@ -20,18 +20,6 @@ class Page extends SiteTree {
 	}
 	
 
-		
-    public static function NewsletterFormShortCodeHandler($arguments,$caption= null,$parser = null) {
-    
-		//get our template
-		$template = new SSViewer('NewsletterForm');
-		
-		$customise = array();
-		
-		//return the customised template
-		return $template->process(new ArrayData($customise));
-	}
-
 }
 class Page_Controller extends ContentController {
 
@@ -63,27 +51,6 @@ class Page_Controller extends ContentController {
 		
 	}
 	
-	public function AllDeadlines(){
-	
-		$deadlines = DataObject::get("Deadline", $filter=null, $sort = "Date ASC");
-		
-		if($deadlines){
-			return $deadlines;
-		
-		}
-	
-	
-	}
-	
-	public function FutureDeadlines($number = 0){
-		$deadlines = DataObject::get("Deadline", $filter="Date >= DATE(NOW())", $sort = "Date ASC", $join = null, $limit = $number);
-	
-		if($deadlines){
-			return $deadlines;
-		
-		}
-			
-	}
 	
 	public function RandomNewEvent($pool_size = 6) {
 	
@@ -93,12 +60,8 @@ class Page_Controller extends ContentController {
 			shuffle($events);
 			return $events[0];
 		}
-		
-		
-	
 	
 	}	
-	
 	public function iswindows() {
 		if (strpos(strtolower($_SERVER['HTTP_USER_AGENT']),"windows") === false) {
 		  return false;

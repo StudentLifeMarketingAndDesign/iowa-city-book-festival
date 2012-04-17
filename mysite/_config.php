@@ -26,15 +26,3 @@ i18n::set_locale('en_US');
 SiteTree::enable_nested_urls();
 Director::set_environment_type("dev");
 FulltextSearchable::enable();
-ShortcodeParser::get()->register('NewsletterForm',array('Page','NewsletterFormShortCodeHandler'));
-
-RecaptchaField::$public_api_key = '6LccTc0SAAAAAAqBZU-iluU2VJCJQTDRuA4-fu-F';
-RecaptchaField::$private_api_key = '6LccTc0SAAAAACK9l57g1HtUwOX6dexh1OP5VjFO';
-
-SpamProtectorManager::set_spam_protector('RecaptchaProtector');
-
-//$recaptchaField = new RecaptchaField('MyCaptcha');
-//$recaptchaField->jsOptions = array('theme' => 'clean'); // optional
-
-Object::add_extension('CMSMain', 'CMSActionDecorator');
-PixlrEditorField::$use_credentials = true;
