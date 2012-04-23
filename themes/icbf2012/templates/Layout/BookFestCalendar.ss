@@ -2,17 +2,28 @@
 
 	<article>
 		<header>
-			<h1>$Title</h1>
+		
+		<% if action = view %>
+			<h1 class="date-header event-list-header">Events on $DateHeader</h1>
+			<% if Events %>
+			<% else %>
+				<p class="homepage-message">No events currently listed on this date. Please check back soon for the full schedule!</p>
+			<% end_if %>
+		<% else_if action = index %>
+			<h1 class="event-list-header">Full Schedule</h1>
+		<% end_if %>
 		</header>
 		<section>
 
-			<ul>
-			<% control UpcomingEvents %>
+		
+
+			
+			<% control Events %>
 				<% control Event %>
-				<li><a href="$Link">$Title</a></li>
+					<% include Event %>
 				<% end_control %>
 			<% end_control %>
-			</ul>
+			
 					
 			$Content
 			$Form
@@ -21,8 +32,7 @@
 	</article>
 			
 			<aside>
-				<h3>aside</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices.</p>
+				<% include Sidebar %>
 			</aside>
 			
 		</div> <!-- #main -->

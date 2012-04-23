@@ -8,6 +8,27 @@ class HomePage extends Page {
 	
 	
 	);
+	
+	public static $has_many = array(
+		"HomePageSliders" => "HomePageSlider"
+	
+	);
+	
+		
+	public function getCMSFields() {
+		$f = parent::getCMSFields();
+		
+	$f->addFieldToTab("Root.Content.Main", new DataObjectManager(
+			$this,
+			'HomePageSliders',
+			'HomePageSlider',
+			array('Caption' => 'Caption'),
+			'getCMSFields_forPopup'
+		));
+      return $f;
+		
+	}
+	
 
 	
 

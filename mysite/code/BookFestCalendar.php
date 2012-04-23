@@ -70,11 +70,12 @@ class BookFestCalendar_Controller extends Calendar_Controller {
  	function tags() {
  	
  		$tagName = addslashes($this->urlParams['Tag']);
- 		$Tag = DataObject::get_one("Tag", "Title = '".$tagName."'");
+ 		$TagObject = DataObject::get_one("Tag", "Title = '".$tagName."'");
  		$Data = array(
-	      'Tag' => $Tag,
-	      'TagName' => $tagName
+	      'Tag' => $TagObject,
+	      'TagName' => stripslashes($tagName)
 	    );
+	    
  		return $this->customise($Data)->renderWith(array('BookFestCategory', 'Calendar', 'Page'));
  	}
  	 	

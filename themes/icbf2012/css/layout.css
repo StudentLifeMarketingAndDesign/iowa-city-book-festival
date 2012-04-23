@@ -78,6 +78,7 @@ body{ font:16px/26px Helvetica, Helvetica Neue, Arial; }
 h1, h2, h3, h4 {
 	font-family: Georgia, serif;
 	font-variant: small-caps;
+	/*text-transform: uppercase;*/
 	letter-spacing: 1px;
 
 }
@@ -89,7 +90,7 @@ h1 {
 
 h2 {
 	font-size: 1.7em;
-	color: #fded91;
+	color: white;
 	margin: 0.8em 0;
 }
 
@@ -99,6 +100,14 @@ h3 {
 	margin: 0.3em 0;
 }
 
+h4 {
+	color: #b9ffff;
+	font-size: 1.2em;
+
+}
+.event-content h3 a{
+	color: white;
+}
 .wrapper{
 	width:90%;
 	margin:0 5%;
@@ -140,7 +149,7 @@ nav {
 	font-family: "Times New Roman", "Georgia", "serif";
 	font-variant: small-caps;
 	letter-spacing: 1px;
-	font-size: 1.1em;
+	font-size: 1.2em;
 
 }
 
@@ -243,10 +252,11 @@ nav a:hover{
 	color: #944E93;
 }
 
-#top-date span.location {
+#top-date span.location a {
 	text-transform: uppercase;
 	color: #DE166B;
 	padding: 0 5px;
+	font-weight: normal;
 }
 
 #top-date span.sponsor {
@@ -279,8 +289,8 @@ nav a:hover{
 .sponsors-sidebar {
 	text-align: center;
 	font-family: 'Times New Roman', 'Georgia', serif;
-	font-size: 0.8em;
-	line-height: 1.2em;
+	font-size: 1em;
+	line-height: 1.3em;
 
 }
 
@@ -296,7 +306,14 @@ img.sponsors-list {
 }
 
 .sidebar-separator {
-	margin: 5px 0;
+	margin: 20px auto;
+	display: block;
+	text-align: center;
+}
+
+p.disability-statement {
+	margin: 30px 0;
+
 }
 
 .day-links {
@@ -310,7 +327,7 @@ img.sponsors-list {
 	border: 1px solid #3983a5;
 	display: block;
 	padding: 5px;
-	margin: 5px 0;
+	margin: 10px 0;
 	text-align: center;
 	color: white;
 	background: #09425c;
@@ -332,29 +349,31 @@ img.sponsors-list {
 	margin: 5px 0;
 	text-align: center;
 	/*background: #17a9eb;*/
+	font-family: 'Times New Roman', 'Georgia', serif;
+	font-variant: small-caps;
+	letter-spacing: 1px;
+	font-size: 2em;
 
 }
 
+/* Event Calendar/List */
 
-/* Homepage featured events */
-
-.homepage-featured-event {
+.event {
 	min-height: 100px;
 	background: #09425C;
 	padding: 20px;
 	border: 1px solid #3983A5;
 	margin: 20px 0;
-
 }
 
-.homepage-featured-event img{
+.event img{
 	float: right;
-	/*width: 50%;*/
-
+	max-width: 30%;
 }
 
-.homepage-featured-event-content {
-	
+img.individual-event-image{
+	float: right;
+	margin: 10px;
 }
 
 /* =============================================================================
@@ -420,9 +439,9 @@ img.sponsors-list {
 
 	nav{
 		float:right;
-		width:42%;
+		/*width:42%;*/
 		/*margin-top: 143px;*/
-		margin-top: 60px;
+		/*margin-top: 60px;*/
 	}
 	
 	#title img {
@@ -493,6 +512,11 @@ img.sponsors-list {
 		width: 1000px;
 
 	}
+	
+.event img{
+	float: right;
+	max-width: 50%;
+}
 	
 	
 }

@@ -26,3 +26,4 @@ i18n::set_locale('en_US');
 SiteTree::enable_nested_urls();
 Director::set_environment_type("dev");
 FulltextSearchable::enable();
+SortableDataObject::add_sortable_class('HomePageSlider');

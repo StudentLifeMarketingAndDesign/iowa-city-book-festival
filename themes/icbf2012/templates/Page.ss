@@ -12,17 +12,34 @@
 	<meta name="author" content="Iowa City Book Festival">
 
 	<meta name="viewport" content="width=device-width">
-
-	<% require themedCSS(layout) %>
 	<% base_tag %>
+	
+	
+	<link rel="stylesheet" href="{$ThemeDir}/css/layout.css" type="text/css" media="screen" />
 	<script src="{$ThemeDir}/js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
+    <script type="text/javascript" src="{$ThemeDir}/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="{$ThemeDir}/js/nivo-slider/jquery.nivo.slider.pack.js"></script>
+    <link rel="stylesheet" href="{$ThemeDir}/js/nivo-slider/nivo-slider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{$ThemeDir}/js/nivo-slider/themes/default/default.css" type="text/css" media="screen" />
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider({
+        
+			effect: 'slideInLeft', // Specify sets like: 'fold,fade,sliceDown'
+	        animSpeed: 500, // Slide transition speed
+	        pauseTime: 4000, // How long each slide will show
+	        startSlide: 0, // Set starting Slide (0 index)
+        
+        });
+    });
+    </script>	
 	
 </head>
 <body>
 
 	<div id="top-bar">
 		<div id="top-date">
-		<span class="date">July 13-15, 2012<!--2012--></span> <span class="location">• UI Pentacrest </span><span class="sponsor">Presented by <a href="http://www.lib.uiowa.edu/" target="_blank">The University of Iowa Libraries</a></span>
+		<span class="date">July 13-15, 2012<!--2012--></span> <span class="location">• <a href="http://g.co/maps/exqwj">UI Pentacrest</a> </span><span class="sponsor">Presented by <a href="http://www.lib.uiowa.edu/" target="_blank">The University of Iowa Libraries</a></span>
 		<div class="clear"></div>
 		</div><!--/end date -->
 	</div>
@@ -57,7 +74,7 @@
 	<div class="pattern"></div>
 <script src="{$ThemeDir}/js/script.js"></script>
 <script>
-	var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+	var _gaq=[['_setAccount','UA-426753-25'],['_trackPageview']];
 	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
 	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
 	s.parentNode.insertBefore(g,s)}(document,'script'));
@@ -70,5 +87,6 @@
   js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=242901859120617";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+
 </body>
 </html>

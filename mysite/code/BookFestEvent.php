@@ -23,6 +23,20 @@ class BookFestEvent extends CalendarEvent {
 	static $default_parent = "events"; // URLSegment of default parent node.
 	static $can_be_root = false;
 	static $allowed_children = "none";
+	
+		function onBeforeWrite(){
+		parent::onBeforeWrite();
+		
+		
+		if($this->Featured){
+			$this->ClassName = "FeaturedBookFestEvent";
+		}else {
+			$this->ClassName = "BookFestEvent";
+		
+		}
+	
+	
+	}
 		
 	function RelatedEvents() {
 		$ids = array();
