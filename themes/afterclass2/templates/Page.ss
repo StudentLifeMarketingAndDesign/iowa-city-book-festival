@@ -7,7 +7,7 @@
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	
+	<meta name="google-site-verification" content="MD1SB5jpniuj3T5xD0ILwjO8HaovtJ05vMx6TYTZxYQ" />
 	<title><% if CategoryName %> $CategoryName - <% end_if %><% if Action = category %>
 		Categories - 
 	<% else_if Action = venue %>
