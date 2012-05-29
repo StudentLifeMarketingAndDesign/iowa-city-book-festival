@@ -7,7 +7,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	$MetaTags(false)
-	<title>$Title - Iowa City Book Festival 2012 presented by The University of Iowa Libraries</title>
+	<title><% if TagName %>{$TagName}s<% else %>$Title<% end_if %> - Iowa City Book Festival 2012 presented by The University of Iowa Libraries</title>
 	<meta name="description" content="The Iowa City Book Festival brings authors to Iowa City for three days to celebrate books, writing, and reading">
 	<meta name="author" content="Iowa City Book Festival">
 	<meta name="viewport" content="width=device-width">
