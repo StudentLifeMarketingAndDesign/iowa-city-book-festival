@@ -9,7 +9,21 @@
 	<li><a href="{$BaseHref}/schedule/tags/Author%20Event">Authors</a></li>
 	<li><a href="{$BaseHref}/schedule/tags/Musician">Musicians</a></li>
 </ul>
-
+<img src="{$ThemeDir}/images/separator.png" class="sidebar-separator" />
+			
+<h3>Find an Author</h3>	
+<form id="SearchForm_SearchForm" action="{$BaseHref}/home/SearchForm" method="get" enctype="application/x-www-form-urlencoded">
+	<fieldset>
+		<legend></legend>
+		
+			<div id="Search" class="field text  nolabel"><div class="middleColumn"><input type="text" class="text nolabel" id="SearchForm_SearchForm_Search" name="Search" value="" placeholder="Search for an author"></div></div>
+		
+		
+			<input class="action " style="display: none" id="SearchForm_SearchForm_action_results"  type="submit" name="action_results" value="Go" title="Go">
+		
+	</fieldset>
+</form>
+			
 <div class="sponsors-sidebar">
 
 	<!--

@@ -225,6 +225,52 @@ nav a:hover{
 /* ===== Primary Styles ========================================================
    Author: Dustin Quam
    ========================================================================== */
+
+/*Search Bar */
+
+aside h3 {
+	text-align: center;
+	
+}
+
+#SearchForm_SearchForm_Search {
+	width: 98%;
+	display: block;	
+}
+
+#Search input {
+	margin-top: 7px;
+	display: block;	
+	margin: auto;	
+}
+
+/* Condensed Event View */
+
+.events-table {
+	background: #09425C;
+	border: 1px solid #3983A5;
+	
+}
+
+.events-table tr {
+	
+	border-bottom: 1px solid #295b73;
+	
+	
+}
+.events-table tr:nth-child(odd) {
+	background: #085579;
+	
+}
+
+.events-table td, .events-table th{
+	padding: 1%;
+}
+
+.events-table th {
+	text-align: left;
+	
+}
    
 /* Topmost Bar */
 
@@ -382,6 +428,11 @@ img.individual-event-image{
 
 @media only screen and (min-width: 532px) {
 
+#SearchForm_SearchForm_Search {
+	width: auto;
+	display: inline-block;	
+	
+}
 
 /* ====================
     INTERMEDIATE: Menu

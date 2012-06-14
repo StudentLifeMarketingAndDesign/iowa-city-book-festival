@@ -51,7 +51,6 @@ class Page_Controller extends ContentController {
 		
 	}
 	
-	
 	public function RandomNewEvent($pool_size = 6) {
 	
 		$newest_events = DataObject::get("AfterClassEvent", $filter = null, $sort = "Created DESC", $join = null, $limit = $pool_size);

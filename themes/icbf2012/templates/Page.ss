@@ -44,6 +44,7 @@
 	</div>
 	<div class="pattern"></div>
 	<div id="header-container">
+
 		<header class="wrapper clearfix">
 			<h1 id="title"><a href="$BaseHref"><img src="{$ThemeDir}/images/logo.png"></img></a></h1>
 			<nav>
@@ -53,6 +54,7 @@
 					<li><a href="$Link">$MenuTitle</a></li>
 				<% end_control %>
 				</ul>
+	
 			</nav>
 
 		</header>
