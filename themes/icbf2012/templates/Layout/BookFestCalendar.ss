@@ -16,6 +16,7 @@
 		<section>
 		
 			<%-- if We're on the home page --%>
+			<p>Action: $action</p>
 			<% if action = index %>
 				
 				<% control Events %>

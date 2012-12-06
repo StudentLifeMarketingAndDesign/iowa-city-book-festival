@@ -7,7 +7,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	$MetaTags(false)
-	<title><% if TagName %>{$TagName}s<% else %>$Title<% end_if %> - Iowa City Book Festival 2012 presented by The University of Iowa Libraries</title>
+	<title><% if TagName %>{$TagName}s<% else %>$Title<% end_if %> - Iowa City Book Festival 2012</title>
 	<meta name="description" content="The Iowa City Book Festival brings authors to Iowa City for three days to celebrate books, writing, and reading">
 	<meta name="author" content="Iowa City Book Festival">
 	<meta name="viewport" content="width=device-width">
@@ -38,7 +38,7 @@
 
 	<div id="top-bar">
 		<div id="top-date">
-		<span class="date">July 13-15, 2012<!--2012--></span> <span class="location">• <a href="http://g.co/maps/exqwj">UI Pentacrest</a> </span><span class="sponsor">Presented by <a href="http://www.lib.uiowa.edu/" target="_blank">The University of Iowa Libraries</a></span>
+		<span class="date">October 11-13, 2013<!--2012--></span> <span class="location"><!--•<a href="http://g.co/maps/exqwj">UI Pentacrest</a> </span><span class="sponsor">Presented by <a href="http://www.lib.uiowa.edu/" target="_blank">The University of Iowa Libraries</a>--></span>
 		<div class="clear"></div>
 		</div><!--/end date -->
 	</div>
@@ -46,7 +46,7 @@
 	<div id="header-container">
 
 		<header class="wrapper clearfix">
-			<h1 id="title"><a href="$BaseHref"><img src="{$ThemeDir}/images/logo.png"></img></a></h1>
+			<h1 id="title"><a href="$BaseHref"><img src="{$ThemeDir}/images/logo2013.png"></img></a></h1>
 			<nav>
 			
 				<ul>

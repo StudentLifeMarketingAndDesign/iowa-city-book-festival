@@ -1,8 +1,10 @@
+<!--
 <ul class="day-links">
 	<li><a href="{$BaseHref}/schedule/view/20120713/">Friday, July 13</a></li>
 	<li><a href="{$BaseHref}/schedule/view/20120714/">Saturday, July 14</a></li>
 	<li><a href="{$BaseHref}/schedule/view/20120715/">Sunday, July 15</a></li>
 </ul>
+-->
 <img src="{$ThemeDir}/images/separator.png" class="sidebar-separator" />
 <ul class="sidebar-tags">
 	<li><a href="{$BaseHref}/schedule/tags/Children%27s%20Event">Children's Events</a></li>
