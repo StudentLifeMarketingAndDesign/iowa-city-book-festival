@@ -31,3 +31,7 @@ SortableDataObject::add_sortable_class('HomePageSlider');
 if(Director::isLive()) {
 	Director::forceSSL(array('/^Security/','/^admin/'));
 }
+
+if(Director::isLive()) {
+	Director::forceSSL(array('/^Security/','/^admin/'));
+}
