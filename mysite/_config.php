@@ -27,3 +27,7 @@ SiteTree::enable_nested_urls();
 Director::set_environment_type("dev");
 FulltextSearchable::enable();
 SortableDataObject::add_sortable_class('HomePageSlider');
+
+if(Director::isLive()) {
+	Director::forceSSL(array('/^Security/','/^admin/'));
+}
